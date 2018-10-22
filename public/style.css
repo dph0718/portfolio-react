@@ -1,0 +1,106 @@
+.App-logo {
+    transition: left 2s;
+    -webkit-transition: left 2s;
+    background-color: green;
+    position: relative;
+}
+
+div {
+    transition: top 1s;
+}
+html {
+    width: 700px;
+    background-color: black;
+    overflow: hidden;
+}
+body {
+    width: 600px;
+    background-color: #222222;
+    color: #aaa;
+    overflow: hidden;
+
+}
+
+#root{
+    background-color: pink;
+    width: 500px;
+    overflow: hidden;
+
+}
+
+.App {
+    width: 400px;
+    background-color: purple;
+    overflow: hidden;
+
+}
+
+.Overall {
+    width: 300px;
+    background-color: navy;
+    overflow: hidden;
+}
+
+.portfolio-card {
+    position: absolute;
+    transition: margin-left 2s, color 2s;
+    transition: left 2s, color 2s;
+    width: inherit;
+}
+
+.carousel-container {
+    font-family: 'press start 2p', system, monospace;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+    padding: 10%;
+    overflow: hidden;
+    background-color: gold;
+    position: absolute;
+}
+
+#right-arrow{
+    position: absolute;
+    right: 0;
+    font-size: 5em;
+    font-family: 'londrina solid';
+    z-index: 5;
+
+}
+
+#left-arrow{
+    position: absolute;
+    left: 0;
+    font-size: 5em;
+    font-family: 'londrina solid';
+    z-index: 5;
+}
+
+.front-row-item{
+    position: absolute;
+    top: 10%;
+    z-index: 4;
+    display: block;
+    pointer-events:auto;
+    height: 72%;
+    width: 90px;
+    border: 3px dashed limegreen;
+    font-size: 1em;
+}
+
+.back-row-item{
+    position: absolute;
+    bottom: 20%;
+    z-index: 3;
+    display: block;   
+    pointer-events: none;
+    height: 24%;
+    width: 80px;
+    opacity: 0.2;
+    transform: rotateY(180deg);
+    border: 3px dashed limegreen;
+    font-size: .3em;
+}

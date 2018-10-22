@@ -4,6 +4,8 @@ import './App.css';
 
 //Importing components
 import Overall from "./components/Overall.js"
+// import { isAbsolute } from 'upath';
+import logem from "./functions/makeCarousel"
 
 class App extends Component {
 
@@ -31,34 +33,45 @@ class App extends Component {
   }
 
   speedInc = () => {
-    console.log('increase speed?')
-    console.log(this.state.atomSpeed)
-    this.setState({ atomSpeed: this.state.atomSpeed - 1 })
+    this.setState({ atomSpeed: this.state.atomSpeed - 50 })
   }
 
   speedDec = () => {
-    console.log('decrease speed?')
-    this.setState({ atomSpeed: this.state.atomSpeed + 1 })
+    this.setState({ atomSpeed: this.state.atomSpeed + 50 })
   }
 
   makeRed = () => {
-    console.log('Make it red.');
     this.setState({ color: 'red' })
   }
 
   render() {
 
+    logem();
     let h1Style = {
       color: this.state.color
     }
 
+    let divMove = {
+      top: this.state.atomSpeed + 'px',
+      position: 'absolute'
+    }
+
+
+
     let atStyle = {
-      style: `animation: App-logo-spin infinite ${this.state.atomSpeed}s linear; color: red`
+      animation: `App-logo-spin infinite ${this.state.atomSpeed}s linear; color: red`,
+      pointerEvents: 'none',
+      // backgroundColor: `${this.state.color}`,
+      left: `${this.state.atomSpeed}px`,
+      position: 'fixed'
     }
 
     return (
       <div className="App">
-        <h1 style={h1Style}>This is an &lt;h1&gt; tag I typed in the <code>App.js</code>  component</h1>
+        <h1 style={h1Style}> <code>App.js</code>  component</h1>
+        <div id='moving-div'
+          style={divMove}> Moving Div.
+        </div>
         <Overall
           prop01="bananas"
           prop02={this.state.stateC}
@@ -70,8 +83,8 @@ class App extends Component {
         <header className="App-header">
           <button onClick={this.makeRed}>Make Red</button>
           <button onClick={this.speedInc}>Faster</button>
-          <button>Slower</button>
-          <img src={logo} className="App-logo" alt="logo" title="rotating atom logo" style={atStyle} />
+          <button onClick={this.speedDec}>Slower</button>
+          <img src={logo} className="App-logo" id="atom-logo" alt="logo" title="rotating atom logo" style={atStyle} />
         </header>
       </div>
     );
