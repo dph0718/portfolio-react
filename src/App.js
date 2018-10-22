@@ -68,10 +68,6 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1 style={h1Style}> <code>App.js</code>  component</h1>
-        <div id='moving-div'
-          style={divMove}> Moving Div.
-        </div>
         <Overall
           prop01="bananas"
           prop02={this.state.stateC}
