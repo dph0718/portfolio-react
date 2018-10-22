@@ -21,12 +21,10 @@ function arrangeCarousel(containingArray, position, row) {
     if (className == 'back-row-item') {
         let halfWay = Math.floor(firstBack / 2);
         adjPos = (((position + halfWay)) + rowSize) % rowSize;
-        distance = (-33 * adjPos) + 66 + (halfWay * 33) + '%';
+        distance = (-33 * adjPos) + (halfWay * 33) + '%';
     };
 
-    if (adjPos === rowSize - 1
-        // || adjPos === 0
-    ) {
+    if (adjPos === rowSize - 1) {
         display = "none"
     } else {
         display = "block"

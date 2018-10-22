@@ -84,7 +84,6 @@ class App extends Component {
           <button onClick={this.makeRed}>Make Red</button>
           <button onClick={this.speedInc}>Faster</button>
           <button onClick={this.speedDec}>Slower</button>
-          <img src={logo} className="App-logo" id="atom-logo" alt="logo" title="rotating atom logo" style={atStyle} />
         </header>
       </div>
     );

@@ -17,7 +17,6 @@ div {
     transition: top 1s;
 }
 html {
-    /* width: 700px; */
     background-color: black;
     overflow: hidden;
 }
@@ -50,6 +49,7 @@ body {
 }
 
 .portfolio-card {
+    display: flex;
     position: absolute;
     transition: margin-left 2s, color 2s;
     transition: left 2s, color 2s;
@@ -60,10 +60,6 @@ body {
 
 .carousel-container {
     font-family: 'press start 2p', system, monospace;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
     width: 800px;
     height: 70px;
     padding: 10%;
@@ -90,17 +86,16 @@ body {
 }
 
 .front-row-item{
+
     position: absolute;
     top: 10%;
     z-index: 4;
-    display: block;
     pointer-events:auto;
-    height: 72%;
-    width: 30%;
-    border: 3px dashed limegreen;
+    height: 75%;
+    width: 30vw;
+    border: 0.4em dashed limegreen;
     background-color: rgba(20, 50, 20, 0.5);
     text-decoration: none;
-
     font-size: 1em;
 }
 
@@ -108,17 +103,22 @@ body {
     position: absolute;
     bottom: 20%;
     z-index: 3;
-    display: block;   
     /* pointer-events: none; */
-    height: 24%;
-    width: 15%;
+    height: 20vh;
+    width: 15vw;
     opacity: 0.2;
     transform: rotateY(180deg) translate(-50%, 0);
-    border: 3px dashed limegreen;
+    border: 0.3em dashed limegreen;
     background-color: rgba(20, 50, 20, 0.5);
     font-size: .3em;
 }
 
-.portfolio-pic {
-    height: 50%;
+.front-row-item .portfolio-pic {
+    height: 60%;
+    border: 0.3em limegreen dashed;
+}
+
+.back-row-item .portfolio-pic {
+    height: 60%;
+    border: 0.2em limegreen dashed;
 }
