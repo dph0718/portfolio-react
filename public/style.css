@@ -5,16 +5,24 @@
     position: relative;
 }
 
+h4 {
+    text-decoration: none;
+
+}
+a:visited, a {
+    color: limegreen;
+    text-decoration: none;
+}
 div {
     transition: top 1s;
 }
 html {
-    width: 700px;
+    /* width: 700px; */
     background-color: black;
     overflow: hidden;
 }
 body {
-    width: 600px;
+    width:100%;
     background-color: #222222;
     color: #aaa;
     overflow: hidden;
@@ -23,20 +31,20 @@ body {
 
 #root{
     background-color: pink;
-    width: 500px;
+    width: 100%;
     overflow: hidden;
 
 }
 
 .App {
-    width: 400px;
+    width: 100%;
     background-color: purple;
     overflow: hidden;
 
 }
 
 .Overall {
-    width: 300px;
+    width: 80%;
     background-color: navy;
     overflow: hidden;
 }
@@ -45,7 +53,9 @@ body {
     position: absolute;
     transition: margin-left 2s, color 2s;
     transition: left 2s, color 2s;
-    width: inherit;
+    transform: translate(-50%, 0);
+    text-decoration: none;
+
 }
 
 .carousel-container {
@@ -54,11 +64,11 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 200px;
+    width: 800px;
     height: 70px;
     padding: 10%;
     overflow: hidden;
-    background-color: gold;
+    background-color: #222;
     position: absolute;
 }
 
@@ -86,8 +96,11 @@ body {
     display: block;
     pointer-events:auto;
     height: 72%;
-    width: 90px;
+    width: 30%;
     border: 3px dashed limegreen;
+    background-color: rgba(20, 50, 20, 0.5);
+    text-decoration: none;
+
     font-size: 1em;
 }
 
@@ -96,11 +109,16 @@ body {
     bottom: 20%;
     z-index: 3;
     display: block;   
-    pointer-events: none;
+    /* pointer-events: none; */
     height: 24%;
-    width: 80px;
+    width: 15%;
     opacity: 0.2;
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translate(-50%, 0);
     border: 3px dashed limegreen;
+    background-color: rgba(20, 50, 20, 0.5);
     font-size: .3em;
+}
+
+.portfolio-pic {
+    height: 50%;
 }

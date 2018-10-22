@@ -12,34 +12,27 @@ class PortfolioCard extends Component {
 
         let row = this.props.row;
         let pos = this.props.position;
-        let color;
+        let pic = this.props.portfolioImage;
+        let color = "limegreen";
         let moving = carouselArrange(portfolioItems, pos, row);
         let distance = moving.distance;
         let className = moving.className;
+        let display = moving.display;
         console.log("MOVING")
         console.log(distance)
-        switch (pos) {
-            case 1: color = 'purple';
-                break;
-            case 2: color = 'yellow'
-                break;
-            case 3: color = 'white';
-                break;
-            default: color = 'black'
-        }
         let styling = {
             className: className + " portfolio-card",
             left: distance,
             color: color,
+            display: display,
         }
         return (
             <div className={styling.className}
                 style={styling} >
-                <h2>This a PortfolioCard component.</h2>
-                <h4>Title: {this.props.title}</h4>
-                <h3>Other thing: {this.props.githubLink}</h3>
-                <h3>{this.props.id}</h3>
-                <p>currently in {this.props.position}</p>
+                <a href="https://www.google.com">
+                    <h4>{this.props.title}</h4>
+                    <img src={pic} alt="good picture" title="good picture" className="portfolio-pic"></img>
+                </a>
             </div>
         )
     }
