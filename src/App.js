@@ -6,7 +6,7 @@ import './App.css';
 import Overall from "./components/Overall.js"
 // import { isAbsolute } from 'upath';
 import logem from "./functions/makeCarousel"
-
+import FolioPage from "./pages/FolioScreen"
 class App extends Component {
 
   state = {
@@ -68,7 +68,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <Overall
+        <FolioPage />
+        {/* <Overall
           prop01="bananas"
           prop02={this.state.stateC}
           prop04={this.inheritedFunction}
@@ -80,7 +81,7 @@ class App extends Component {
           <button onClick={this.makeRed}>Make Red</button>
           <button onClick={this.speedInc}>Faster</button>
           <button onClick={this.speedDec}>Slower</button>
-        </header>
+        </header> */}
       </div>
     );
   }

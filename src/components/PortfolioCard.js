@@ -18,8 +18,6 @@ class PortfolioCard extends Component {
         let distance = moving.distance;
         let className = moving.className;
         let display = moving.display;
-        console.log("MOVING")
-        console.log(distance)
         let styling = {
             className: className + " portfolio-card",
             left: distance,
@@ -29,8 +27,8 @@ class PortfolioCard extends Component {
         return (
             <div className={styling.className}
                 style={styling} >
-                <a href="https://www.google.com">
                     <h4>{this.props.title}</h4>
+                <a href={this.props.githubLink}>
                     <img src={pic} alt="good picture" title="good picture" className="portfolio-pic"></img>
                 </a>
             </div>
