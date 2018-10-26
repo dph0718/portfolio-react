@@ -45,12 +45,12 @@ html {
 .carousel-container {
     font-family: 'press start 2p', system, monospace;
     width: 31%;
-    height: 21.3vw;
+    height: 22vw;
     left: 35%;
     overflow: hidden;
     background-color: #222;
     position: absolute;
-    top: 11.25vw;
+    top: 10.8vw;
 }
 
 .nav-arrow {

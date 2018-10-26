@@ -10,7 +10,7 @@ function makeCarousel(row) {
         return <PortfolioCard
             title={pfItem.title}
             githubLink={pfItem.githubLink}
-            linkedInLink={pfItem.linkedInLink}
+            alt={pfItem.alt}
             stackOverflowLink={pfItem.stackOverflowLink}
             portfolioImage={pfItem.portfolioImage}
             key={pfItem.id}

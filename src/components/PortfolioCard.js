@@ -13,6 +13,7 @@ class PortfolioCard extends Component {
         let row = this.props.row;
         let pos = this.props.position;
         let pic = this.props.portfolioImage;
+        let alt = this.props.alt;
         let color = "limegreen";
         let moving = carouselArrange(portfolioItems, pos, row);
         let distance = moving.distance;
@@ -28,8 +29,8 @@ class PortfolioCard extends Component {
             <div className={styling.className}
                 style={styling} >
                     <h4>{this.props.title}</h4>
-                <a href={this.props.githubLink}>
-                    <img src={pic} alt="good picture" title="good picture" className="portfolio-pic"></img>
+                <a  href={this.props.githubLink} target="_blank">
+                    <img src={pic} alt="good picture" title={alt} className="portfolio-pic"></img>
                 </a>
             </div>
         )

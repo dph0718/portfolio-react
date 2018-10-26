@@ -1,7 +1,7 @@
 let PortfolioObject = class {
     constructor(title,
         githubLink,
-        linkedInLink,
+        alt,
         stackOverflowLink,
         portfolioImage,
         id,
@@ -10,7 +10,7 @@ let PortfolioObject = class {
 
         this.title = title;
         this.githubLink = githubLink;
-        this.linkedInLink = linkedInLink;
+        this.alt = alt;
         this.stackOverflowLink = stackOverflowLink;
         this.portfolioImage = portfolioImage;
         this.id = id;
@@ -22,15 +22,16 @@ let PortfolioObject = class {
 
 //export all of them.
 export default [
-    new PortfolioObject('Gif Fisher', 'http://github.com', 'blah', 'blah', 'images/fishygif.png', "1"),
-    new PortfolioObject('Desktop Fighter', 'http://github.com', 'blah', 'blah', 'images/week4.png', "2"),
-    new PortfolioObject('Tiki Trivia', 'http://github.com', 'blah', 'blah', 'images/tikitrivia.png', "3"),
-    new PortfolioObject('Frender', 'http://github.com', 'blah', 'blah', 'images/shaqfu.png', "3"),
-    new PortfolioObject('LIRI, the Cable Guy', 'http://github.com', 'blah', 'blah', 'images/liri.png', "3"),
-    new PortfolioObject('Hangman', 'http://github.com', 'blah', 'blah', 'images/hangman.png', "3"),
-    new PortfolioObject('Karmadillo', 'http://github.com', 'blah', 'blah', 'images/shaqfu.png', "4"),
-    new PortfolioObject('MeetPie', 'http://github.com', 'blah', 'blah', 'images/shaqfu.png', "5"),
-    new PortfolioObject('Another App', 'http://github.com', 'blah', 'blah', 'images/shaqfu.png', "5"),
-    new PortfolioObject('Home Alone II', 'http://github.com', 'blah', 'blah', 'images/shaqfu.png', "5"),
-    new PortfolioObject('Harry & the Hendersons', 'http://github.com', 'blah', 'blah', 'images/shaqfu.png', "5"),
+    new PortfolioObject('Gif Fisher', 'https://dph0718.github.io/fishy-gif/', 'Gif Fisher', 'blah', 'images/fishygif.png', "1"),
+    new PortfolioObject('Desktop Fighter', 'https://dph0718.github.io/The-Weak-Four/', 'Desktop Figher', 'blah', 'images/week4.png', "2"),
+    new PortfolioObject('Tiki Trivia', 'https://dph0718.github.io/Tiki-Trivia/', 'Tiki Trivia', 'blah', 'images/tikitrivia.png', "3"),
+    new PortfolioObject('Frender', 'https://github.com/dph0718/frender', 'Frender', 'blah', 'images/frender.png', "4"),
+    new PortfolioObject('LIRI, the Cable Guy', 'https://github.com/dph0718/liri-node-app', 'Liri, the Cable Guy', 'blah', 'images/liri.png', "5"),
+    new PortfolioObject('Hangman', 'https://dph0718.github.io/Hangman-Game/', 'Hangman', 'blah', 'images/hangman.png', "6"),
+    new PortfolioObject('Commodore Amiga Photo Carousel', 'https://github.com/dph0718/portfolio-react', "You're lookin' at it, bud.", 'blah', 'images/amiga.png', "7"),
+    new PortfolioObject('Karmadillo', 'http://github.com', 'Karmadillo', 'blah', 'images/karmadillo.png', "8"),
+    new PortfolioObject('MeetPie', 'http://github.com', 'Meetpie', 'blah', 'images/meetpie.png', "9"),
+    new PortfolioObject('Shaq Fu', 'http://github.com', 'The ultimate figher for SNES', 'blah', 'images/shaqfu.png', "10"),
+    new PortfolioObject('Home Alone II', 'http://github.com', 'Lost in New York', 'blah', 'images/shaqfu.png', "11"),
+    new PortfolioObject('Harry & the Hendersons', 'http://github.com', "John Lithgow's finest performance.", 'blah', 'images/shaqfu.png', "12"),
 ];
